@@ -1,0 +1,866 @@
+.hero {
+    width: 100%;
+    aspect-ratio: 1920 / 420; /* Based on typical banner size */
+    background: url("/images/banner/banner.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* Simple dimming overlay */
+    z-index: 0;
+}
+
+.about {
+    padding: 50px 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px 80px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* SECTION */
+.aboutSection {
+    display: flex;
+    gap: 40px;
+    padding: 60px 80px;
+    background: #fff;
+}
+
+/* IMAGE */
+.imageBox {
+    position: relative;
+    width: 40%;
+}
+
+.imageBox img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* overlay text */
+.imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(to top, rgba(122, 122, 31, 0.9), transparent);
+    color: white;
+}
+
+/* RIGHT */
+.content {
+    flex: 1;
+}
+
+/* TEXT */
+.content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* STATS GRID */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.statCard {
+    background: linear-gradient(90deg, #ffffff 0%, #f3efe0 100%);
+    padding: 24px 30px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-right: 3px solid #c2b536;
+}
+
+.statContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.statCard img {
+    width: 45px;
+    height: auto;
+}
+
+.statCard h3 {
+    margin: 0;
+    color: #000;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.statCard p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* SECTION */
+.historySection {
+    display: flex;
+    gap: 40px;
+    padding: 60px 80px;
+    background: #fff;
+}
+
+/* LEFT MENU */
+.historyMenu {
+    width: 280px;
+}
+
+.historyMenu h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4f5921;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.historyMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menuItem {
+    padding: 14px 20px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.2s ease;
+}
+
+/* ACTIVE MENU */
+.active {
+    background: linear-gradient(180deg, #7a7536 0%, #b3b28b 100%);
+    color: white !important;
+    font-weight: 500;
+}
+
+/* RIGHT CONTENT */
+.historyContent {
+    flex: 1;
+}
+
+.historyContent h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.subText {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* TIMELINE */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timelineItem {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* YEAR BOX */
+.yearBox {
+    min-width: 180px;
+    background: #f0f0d8;
+    padding: 10px;
+    border-left: 4px solid #7a7a1f;
+    font-size: 13px;
+}
+
+/* 7 COLLEGES SECTION */
+.collegesSection {
+    padding: 70px 0;
+    background: #fff;
+}
+
+.collegesHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 80px;
+}
+
+.collegesHeader h2 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.collegesHeader p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* CARDS GRID */
+.collegesGrid {
+    display: flex;
+    height: 550px;
+    width: 100%;
+}
+
+.collegeCard {
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    transition: flex 0.3s ease;
+}
+
+.collegeCard:last-child {
+    border-right: none;
+}
+
+.collegeCard:hover {
+    flex: 1.5;
+}
+
+.collegeOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(to top, rgba(94, 99, 48, 0.95) 0%, rgba(94, 99, 48, 0) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px 20px;
+}
+
+.collegeOverlay p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+    border-left: 4px solid #c2b536;
+    padding-left: 12px;
+    line-height: 1.5;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* SECTION */
+.meetingsSection {
+    padding: 60px 80px;
+    background: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.meetingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.meetingsHeader h2 {
+    font-size: 28px;
+    color: #111;
+    font-weight: 700;
+}
+
+.viewAll {
+    color: #7a7536;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* LIST */
+.meetingsList {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ITEM */
+.meetingItem {
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 1px solid #e0dfb9;
+    gap: 30px;
+    align-items: center;
+}
+
+.meetingItem:first-child {
+    border-top: 1px solid #e0dfb9;
+}
+
+/* DATE BOX */
+.dateBoxWrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.dateBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+}
+
+.dateBox h3 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+    line-height: 1;
+}
+
+.dateBox span {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.verticalDivider {
+    width: 2px;
+    height: 100px;
+    background-color: #e0dfb9;
+}
+
+/* CONTENT */
+.meetingContent {
+    flex: 1;
+}
+
+.meetingContent h4 {
+    font-size: 18px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.meetingDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detailRow {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+    font-weight: 500;
+}
+
+.iconImg {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    margin-right: 8px;
+    opacity: 0.7;
+    filter: grayscale(1);
+}
+
+.tagGreen {
+    background: #7a7536;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    margin: 0 5px;
+}
+
+.spacing {
+    margin-right: 10px;
+}
+
+.spacing2 {
+    margin-left: 10px;
+}
+
+/* IMAGE */
+.meetingImage {
+    width: 280px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.meetingImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === NEWS SECTION === */
+.newsSection {
+    padding: 80px;
+    background: linear-gradient(180deg, #e3dfc8 0%, #edeadd 50%, #e3dfc8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* BACKGROUND GRAPHICS */
+.newsSection::before {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(162,165,116,0.3) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.newsSection::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(162,165,116,0.3) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.newsContainer {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.newsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.newsHeader h2 {
+    font-size: 32px;
+    color: #111;
+    font-weight: 800;
+}
+
+.newsNav {
+    display: flex;
+    gap: 16px;
+}
+
+.navBtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #7a7536;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s;
+    color: #7a7536;
+    font-size: 18px;
+}
+
+.navBtn:hover {
+    background: #fff;
+    border-color: #666;
+    color: #111;
+}
+
+/* FEATURED CARD */
+.featuredCard {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+}
+
+.featuredImage {
+    width: 50%;
+    min-height: 400px;
+}
+
+.featuredImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featuredContent {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tagOlive {
+    background: #6b6928;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.featuredContent h3 {
+    font-size: 26px;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.featuredContent p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.readMoreBtn {
+    padding: 10px 24px;
+    border: 1px solid #6b6928;
+    color: #6b6928;
+    background: transparent;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.readMoreBtn:hover {
+    background: #6b6928;
+    color: white;
+}
+
+.paginationDots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 80px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b5b5b5;
+}
+
+.dotActive {
+    width: 24px;
+    height: 8px;
+    border-radius: 4px;
+    background: #6b6928;
+}
+
+/* NEWS ROW */
+.newsRowHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.newsRowHeader h2 {
+    font-size: 28px;
+    color: #111;
+    font-weight: 800;
+}
+
+.newsGrid {
+    display: flex;
+    gap: 30px;
+}
+
+.newsCard {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.newsCardImage {
+    position: relative;
+    height: 220px;
+}
+
+.newsCardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tagFloating {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #6b6928;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.newsCardContent {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.newsCardContent h4 {
+    font-size: 16px;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.newsCardContent p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.aboutSection, .historySection, .meetingsSection, .newsSection, .collegesSection {
+    width: 100%;
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+
+@media (max-width: 1024px) {
+    .aboutSection, .historySection, .meetingsSection, .newsSection, .collegesHeader {
+        padding: 40px 20px;
+    }
+    
+    .hero {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .heroContent {
+        gap: 15px;
+    }
+
+    .heroLogo {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+    }
+
+    .heroText h1 {
+        font-size: 18px;
+    }
+
+    .heroText p {
+        font-size: 14px;
+    }
+
+    .aboutSection, .historySection, .meetingsSection, .newsSection, .collegesHeader {
+        padding: 30px 15px !important;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .imageBox {
+        width: 100% !important;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .historyMenu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .historyMenu h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .menuItem {
+        text-align: center;
+    }
+
+    .timelineItem {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .yearBox {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .collegesHeader {
+        padding: 0 20px;
+    }
+
+    .collegesGrid {
+        display: flex;
+        height: 350px; /* Reduced height for mobile but keep horizontal */
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .collegeCard {
+        flex: 1;
+        height: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        width: auto;
+    }
+    
+    .collegeCard:hover {
+        flex: 3; /* More dramatic expansion on mobile hover */
+        height: 100%;
+    }
+
+    .collegeOverlay {
+        height: 100%;
+        padding: 10px;
+        background: linear-gradient(to top, rgba(94, 99, 48, 0.8) 0%, transparent 60%);
+    }
+
+    .collegeOverlay p {
+        font-size: 11px;
+        padding-left: 6px;
+    }
+
+    /* MEETINGS */
+    .meetingsHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .meetingItem {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dateBoxWrapper {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .verticalDivider {
+        display: none;
+    }
+
+    .meetingImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* NEWS */
+    .featuredCard {
+        flex-direction: column;
+    }
+
+    .featuredImage {
+        width: 100%;
+        min-height: 250px; /* Reduced from 400px */
+        height: 250px;
+    }
+
+    .featuredContent {
+        width: 100%;
+        padding: 25px 20px; /* Reduced padding */
+        justify-content: flex-start; /* Align content to top */
+    }
+
+    .newsGrid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .statCard h3 {
+        font-size: 28px;
+    }
+
+    .featuredContent h3 {
+        font-size: 20px;
+    }
+}

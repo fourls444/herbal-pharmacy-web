@@ -1,0 +1,77 @@
+.section {
+    padding: 0;
+    background: transparent;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.header p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.presidentWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.presidentCard {
+    width: 320px;
+    text-align: center;
+}
+
+.presidentCard img {
+    width: 100%;
+    display: block;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    width: calc(16.666% - 13px); /* 6 columns layout based on image count */
+    min-width: 140px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 18px;
+    }
+    
+    .presidentCard {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .card {
+        width: calc(50% - 10px); /* 2 columns on mobile */
+    }
+}

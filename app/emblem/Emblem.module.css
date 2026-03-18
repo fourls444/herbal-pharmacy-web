@@ -1,0 +1,83 @@
+.section {
+    padding: 0;
+    width: 100%;
+}
+
+/* TOP AREA */
+.topContainer {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+/* EMBLEMS */
+.emblemsWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emblemImage {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* DESCRIPTION CARD (IMAGE) */
+.descriptionWrapper {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.descriptionImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* GRID AREA */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gridCard {
+    width: 100%;
+}
+
+.wideCard {
+    grid-column: span 2;
+}
+
+.gridImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .topContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .emblemsWrapper, .descriptionWrapper {
+        width: 100%;
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    .wideCard {
+        grid-column: span 1;
+    }
+}
