@@ -1,4 +1,4 @@
-import styles from "./Location.module.css";
+import styles from "./LocationSection.module.css";
 
 export default function LocationSection() {
     return (

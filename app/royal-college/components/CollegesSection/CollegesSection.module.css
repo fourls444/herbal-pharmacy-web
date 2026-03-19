@@ -1,0 +1,82 @@
+.collegesSection {
+    padding: 70px 0;
+    background: #fff;
+    width: 100%;
+}
+
+.collegesHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 80px;
+}
+
+.collegesHeader h2 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.collegesHeader p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* CARDS GRID */
+.collegesGrid {
+    display: flex;
+    height: 550px;
+    width: 100%;
+}
+
+.collegeCard {
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    transition: flex 0.3s ease;
+}
+
+.collegeCard:last-child {
+    border-right: none;
+}
+
+.collegeCard:hover {
+    flex: 1.5;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1024px) {
+    .collegesHeader {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collegesHeader {
+        padding: 0 20px;
+    }
+
+    .collegesGrid {
+        display: flex;
+        height: 350px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .collegeCard {
+        flex: 1;
+        height: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        width: auto;
+    }
+
+    .collegeCard:hover {
+        flex: 3;
+        height: 100%;
+    }
+}

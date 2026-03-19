@@ -1,4 +1,4 @@
-import styles from "./Committee.module.css";
+import styles from "./CommitteeSection.module.css";
 
 export default function CommitteeSection() {
     return (

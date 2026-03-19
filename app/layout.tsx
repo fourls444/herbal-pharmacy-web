@@ -3,8 +3,8 @@ import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
 
 export const metadata = {
-  title: "ราชวิทยาลัยเภสัชกรรมแห่งประเทศไทย",
-  description: "The Royal College of Pharmacy of Thailand",
+  title: "วิทยาลัยเภสัชพันธุศาสตร์และเภสัชกรรมแม่นยำ",
+  description: "pharmacogenomics",
 };
 
 export default function RootLayout({
